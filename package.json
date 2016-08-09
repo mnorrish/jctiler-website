@@ -1,0 +1,12 @@
+{
+  "name": "jctiler",
+  "version": "0.0.0",
+  "description": "JC Tiler website",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "matt@mnorrish.co.nz",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
