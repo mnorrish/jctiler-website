@@ -4,11 +4,16 @@
   "description": "JC Tiler website",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --config=./.eslintrc.js . && pug-lint --config=./.pug-lintrc.js .",
     "build": "webpack --config=./webpack.config.js --progress --display-error-details --profile"
   },
   "author": "matt@mnorrish.co.nz",
   "license": "ISC",
   "dependencies": {
+    "eslint": "3.2.2",
+    "eslint-config-airbnb-base": "5.0.1",
+    "eslint-plugin-import": "1.12.0",
+    "pug-lint": "2.3.0",
     "webpack": "1.13.1",
     "webpack-dev-server": "1.14.1"
   }
