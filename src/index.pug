@@ -3,5 +3,6 @@ html( lang='en' )
   head
     title JC Tiler
 
-  body
-    p JC Tiler
+    if htmlWebpackPlugin.options.isDevServer
+      script( src='/webpack-dev-server.js' )
+  body.container

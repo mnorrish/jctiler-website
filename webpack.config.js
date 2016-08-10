@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlExcludeAssetPlugin = require('./HtmlExcludeAssetPlugin');
 
+const isDevServer = process.env.NODE_ENV === 'dev-server';
+
 module.exports = {
 
   context: path.resolve('src'),
@@ -25,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.(sass|scss)$/,
-        loader: ExtractTextPlugin.extract(['css', 'postcss', 'sass']),
+        loader: ExtractTextPlugin.extract(['css?sourceMap', 'postcss?sourceMap', 'sass?sourceMap']),
       },
       {
         test: /\.(jpg|jpeg|png|gif|woff|woff2|eot|otf|ttf|svg|svgz)(\?.*$|$)/,
@@ -40,11 +42,12 @@ module.exports = {
   plugins: [
     new HtmlExcludeAssetPlugin({
       exclude(asset) {
-        return asset.tagName === 'script';
+        return asset.tagName === 'script' && asset.attributes.src.match(/^styles/);
       },
     }),
     new HtmlWebpackPlugin({
       template: 'index.pug',
+      isDevServer,
     }),
     new ExtractTextPlugin('[name].css'),
   ],
@@ -52,6 +55,7 @@ module.exports = {
   postcss() {
     return [
       autoprefixer({
+        // browser prefixing used by Bootstrap 3
         browsers: [
           'Android 2.3',
           'Android >= 4',
