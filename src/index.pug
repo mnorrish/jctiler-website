@@ -1,8 +1,35 @@
 doctype html
 html( lang='en' )
   head
+    meta( name='viewport' content='width=device-width, initial-scale=1' )
+
     title JC Tiler
 
     if htmlWebpackPlugin.options.isDevServer
       script( src='/webpack-dev-server.js' )
+
   body.container
+    header.row
+      .col-xs-12
+        h1.logo.pull-left JC Tiler
+        h2.contact.pull-right
+          span.phone Phone #[span.phone-number 021 201 3102]
+          br
+          span.quote for free measure and quote
+
+    main
+      section.row
+        .col-md-8.col-xs-12
+          p James Cordery &mdash; Dunedin based tiler specialising in kitchens, bathrooms, and waterproofing.
+          p With over 30 years of floor and wall tiling experience, I deliver high quality workmanship and friendly, professional service.
+          p Mapei approved waterproofer.
+
+      aside.contact.row
+        a.contact-facebook.col-md-4.col-xs-12( href='' ) JC Tiler on Facebook
+        a.contact-builderscrack.col-md-4.col-xs-12( href= '' ) Customer reviews on builderscrack.co.nz
+        a.contact-email.col-md-4.col-xs-12( href='' ) Contact by email jamescordery14@gmail.com
+
+      section.gallery
+
+    footer
+      small &copy; All rights reserved. James Cordery 2016.
