@@ -2,6 +2,7 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlExcludeAssetPlugin = require('./HtmlExcludeAssetPlugin');
 
 module.exports = {
 
@@ -37,6 +38,11 @@ module.exports = {
   },
 
   plugins: [
+    new HtmlExcludeAssetPlugin({
+      exclude(asset) {
+        return asset.tagName === 'script';
+      },
+    }),
     new HtmlWebpackPlugin({
       template: 'index.pug',
     }),
