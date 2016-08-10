@@ -12,7 +12,6 @@ module.exports = {
   disallowLegacyMixinCall: true,
   disallowMultipleLineBreaks: true,
   disallowStringConcatenation: true,
-  disallowTagInterpolation: true,
   requireClassLiteralsBeforeAttributes: true,
   requireIdLiteralsBeforeAttributes: true,
   requireLineFeedAtFileEnd: true,
