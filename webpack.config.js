@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const isDevServer = process.env.NODE_ENV === 'dev-server';
 
-module.exports = {
+const config = {
 
   context: path.resolve('src'),
 
@@ -78,3 +78,11 @@ module.exports = {
   devtool: 'sourcemap',
 
 };
+
+if (!isDevServer) {
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin()
+  );
+}
+
+module.exports = config;
