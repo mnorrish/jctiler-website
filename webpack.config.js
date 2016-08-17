@@ -1,8 +1,8 @@
+const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlExcludeAssetPlugin = require('./HtmlExcludeAssetPlugin');
 
 const isDevServer = process.env.NODE_ENV === 'dev-server';
 
@@ -16,7 +16,10 @@ module.exports = {
   },
 
   entry: {
-    styles: './styles.sass',
+    main: [
+      './ga.js',
+      './styles.sass',
+    ],
   },
 
   module: {
@@ -40,16 +43,14 @@ module.exports = {
   },
 
   plugins: [
-    new HtmlExcludeAssetPlugin({
-      exclude(asset) {
-        return asset.tagName === 'script' && asset.attributes.src.match(/^styles/);
-      },
-    }),
     new HtmlWebpackPlugin({
       template: 'index.pug',
       isDevServer,
     }),
     new ExtractTextPlugin('[name].css'),
+    new webpack.DefinePlugin({
+      IS_DEV: isDevServer,
+    }),
   ],
 
   postcss() {
