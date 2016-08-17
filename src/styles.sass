@@ -18,6 +18,54 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/'
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/utilities'
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities'
 
+$brandBlue: #50C9EA
+
 body
-  background: black
+  background: #666
   color: white
+  min-width: 320px
+  // padding: 0 60px
+
+.container
+  background: #ccc
+
+header
+  height: 465px
+  background: #000
+
+  .logo
+    width: 90px
+    height: 90px
+    background: white
+
+  .contact
+    & > *
+      display: block
+    .phone
+      font-size: 27px
+    .quote
+      font-size: 12px
+
+main
+  position: relative
+
+.blurb
+  position: absolute
+  bottom: 100%
+
+  .blurb-content
+    padding-top: 10px
+    border-left: 5px solid $brandBlue
+    margin: 0 0 15px 15px
+
+.contact
+  padding-top: 15px
+
+  a
+    display: block
+    color: white
+    text-decoration: none
+    background: $brandBlue
+    height: 55px
+    padding: 10px
+    margin-bottom: 12px
