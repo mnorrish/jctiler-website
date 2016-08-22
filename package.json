@@ -11,7 +11,7 @@
     "prebuild": "rimraf ./dist; mkdir ./dist",
     "lint": "eslint --config=./.eslintrc.js . && pug-lint --config=./.pug-lintrc.js .",
     "build": "webpack --config=./webpack.config.js --progress --display-error-details --profile",
-    "dev": "NODE_ENV=dev-server webpack-dev-server --config=./webpack.config.js --progress  --display-error-details --profile --inline --content-base ./dist"
+    "dev": "NODE_ENV=dev-server webpack-dev-server --config=./webpack.config.js --progress  --display-error-details --profile --inline --content-base ./dist --host=0.0.0.0"
   },
   "author": "matt@mnorrish.co.nz",
   "license": "ISC",
