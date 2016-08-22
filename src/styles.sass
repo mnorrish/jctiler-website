@@ -18,54 +18,184 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/'
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/utilities'
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities'
 
-$brandBlue: #50C9EA
+$brandBlue: #50c9ea
+
+$spacing-xs: $grid-gutter-width / 2
+$header-height-sm: 860px
+$header-height-lg: 1170px
 
 body
   background: #666
   color: white
   min-width: 320px
-  // padding: 0 60px
 
-.container
-  background: #ccc
+  @media (min-width: $screen-md-min)
+    font-size: 20px
 
 header
-  height: 465px
-  background: #000
+  height: 460px
+  background:
+    image: url(./images/header-xs-400.jpg)
+    position: center top
+    repeat: no-repeat
+    size: cover
+
+  .container
+    padding-top: $spacing-xs
+
+  // @media (min-width: 401px)
+  //   background:
+  //     image: url(./images/header-xs.jpg)
 
   .logo
+    @extend .text-hide
     width: 90px
     height: 90px
-    background: white
+    margin: 0
+    background:
+      image: url(./images/logo.svg)
 
   .contact
+    margin: 0
+    position: relative
+    top: 6px
+
     & > *
       display: block
+
     .phone
       font-size: 27px
+
     .quote
       font-size: 12px
+
+  @media (min-width: $screen-sm-min)
+    background-image: url(./images/header-sm.jpg)
+    height: $header-height-sm
+
+    .row
+      padding: 15px
+
+    .logo
+      width: 164px
+      height: 164px
+
+    .contact
+      background: $brandBlue
+      color: #000
+      padding: 30px
+      top: 18px
+
+      .phone
+        font-size: 42px
+        line-height: 1.2
+
+      .quote
+        font-size: 30px
+        line-height: 1.2
+
+  @media (min-width: $screen-lg-min)
+    background-image: url(./images/header-lg.jpg)
+    height: $header-height-lg
 
 main
   position: relative
 
-.blurb
-  position: absolute
-  bottom: 100%
+  .blurb
+    position: absolute
+    bottom: 100%
 
-  .blurb-content
-    padding-top: 10px
-    border-left: 5px solid $brandBlue
-    margin: 0 0 15px 15px
+    .blurb-content
+      padding-top: 10px
+      border-left: 5px solid $brandBlue
+      margin: 0 0 $spacing-xs $spacing-xs
+      width: auto
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7)
 
-.contact
-  padding-top: 15px
+  .contact
+    background: #ccc
+    padding-top: $spacing-xs
 
-  a
-    display: block
-    color: white
-    text-decoration: none
-    background: $brandBlue
-    height: 55px
-    padding: 10px
-    margin-bottom: 12px
+    a
+      display: block
+      color: white
+      text-decoration: none
+      background: $brandBlue
+      height: 55px
+      padding: 6px 10px
+      margin-bottom: 12px
+      font:
+        family: $headings-font-family
+        weight: normal
+        size: 16px
+      line-height: 22px
+
+  .gallery
+    height: 500px
+    background: #ccc
+
+  @media (min-width: $screen-sm-min)
+    margin-top: -$header-height-sm + 230px
+    min-height: $header-height-sm - 230px
+
+    .blurb
+      position: static
+      padding:
+        left: 15px
+
+      .blurb-content
+        padding:
+          top: 50px
+          left: 30px
+          bottom: 30px
+        position: relative
+        width: 650px
+        margin-bottom: 40px
+
+        &::before
+          content: ''
+          position: absolute
+          display: block
+          top: 19px
+          left: -24px
+          border:
+            bottom: 5px solid $brandBlue
+            right: 5px solid $brandBlue
+          width: 268px
+          height: 0
+
+    .contact
+      background: none
+      padding: 0 15px
+
+  @media (min-width: $screen-md-min)
+    margin-top: -$header-height-sm + 345px
+    min-height: $header-height-sm - 345px
+
+    .contact
+      a
+        background: none
+        border: 3px solid $brandBlue
+        height: 195px
+        font-size: 18px
+        line-height: 26px
+        padding: 120px 15px 0
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7)
+
+  @media (min-width: $screen-lg-min)
+    margin-top: -$header-height-lg + 355px
+    min-height: $header-height-lg - 355px
+
+    .contact
+      margin-top: 300px
+
+footer
+  background: #ccc
+  color: #4d4d4d
+  text-align: center
+  padding:
+    top: $spacing-xs
+    bottom: $spacing-xs
+
+  @media (min-width: $screen-sm-min)
+    text-align: left
