@@ -24,6 +24,8 @@ $spacing-xs: $grid-gutter-width / 2
 $header-height-sm: 860px
 $header-height-lg: 1170px
 
+$max-page-width: 1280px
+
 body
   background: #666
   color: white
@@ -42,10 +44,6 @@ header
 
   .container
     padding-top: $spacing-xs
-
-  // @media (min-width: 401px)
-  //   background:
-  //     image: url(./images/header-xs.jpg)
 
   .logo
     @extend .text-hide
@@ -101,6 +99,8 @@ header
   @media (min-width: $screen-lg-min)
     background-image: url(./images/header-lg.jpg)
     height: $header-height-lg
+    max-width: $max-page-width
+    margin: 0 auto
 
 main
   position: relative
@@ -189,6 +189,10 @@ main
   @media (min-width: $screen-lg-min)
     margin-top: -$header-height-lg + 355px
     min-height: $header-height-lg - 355px
+    max-width: $max-page-width
+    margin:
+      left: auto
+      right: auto
 
     .contact
       margin-top: 300px
@@ -203,3 +207,5 @@ footer
 
   @media (min-width: $screen-sm-min)
     text-align: left
+    max-width: $max-page-width
+    margin: 0 auto
