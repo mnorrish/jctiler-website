@@ -34,7 +34,7 @@ const config = {
       },
       {
         test: /\.(jpg|jpeg|png|gif|woff|woff2|eot|otf|ttf|svg|svgz)(\?.*$|$)/,
-        loader: 'file-loader',
+        loader: 'file',
         query: {
           name: 'assets/[hash].[ext]',
         },
