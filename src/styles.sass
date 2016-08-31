@@ -31,9 +31,6 @@ body
   color: white
   min-width: 320px
 
-  @media (min-width: $screen-md-min)
-    font-size: 20px
-
   @media (min-width: $screen-lg-min)
     background: #666
 
@@ -98,6 +95,9 @@ header
       .quote
         font-size: 30px
         line-height: 1.2
+
+  @media (min-width: $screen-md-min)
+    font-size: 20px
 
   @media (min-width: $screen-lg-min)
     background-image: url(./images/header-lg.jpg)
@@ -184,6 +184,7 @@ main
       padding: 30px 15px
 
   @media (min-width: $screen-md-min)
+    font-size: 20px
     margin-top: -$header-height-sm + 295px
     min-height: $header-height-sm - 295px
 
