@@ -75,7 +75,7 @@ const config = {
     precision: 8,
   },
 
-  devtool: 'sourcemap',
+  devtool: isDevServer ? 'sourcemap' : null,
 
 };
 
