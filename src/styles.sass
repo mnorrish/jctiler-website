@@ -137,15 +137,6 @@ main
         size: 16px
       line-height: 22px
 
-  .gallery
-    height: 500px
-    background: #ccc
-
-    img
-      display: block
-      width: 100%
-      background: #fff
-
   @media (min-width: $screen-sm-min)
     margin-top: -$header-height-sm + 230px
     min-height: $header-height-sm - 230px
@@ -180,9 +171,6 @@ main
       background: none
       padding: 0 15px
 
-    .gallery
-      padding: 30px 15px
-
   @media (min-width: $screen-md-min)
     margin-top: -$header-height-sm + 295px
     min-height: $header-height-sm - 295px
@@ -203,15 +191,6 @@ main
         &:hover
           background: $brandBlue
           text-shadow: none
-
-    .gallery
-      .gallery-image
-        &:nth-child(3)
-          img
-            height: 400px
-
-          & + *
-            margin-top: -300px
 
   @media (min-width: $screen-lg-min)
     margin-top: -$header-height-lg + 355px
