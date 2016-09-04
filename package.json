@@ -30,6 +30,7 @@
     "html-loader": "0.4.3",
     "html-webpack-plugin": "2.22.0",
     "node-sass": "3.8.0",
+    "photoswipe": "4.1.1",
     "postcss-loader": "0.9.1",
     "pug": "2.0.0-beta4",
     "pug-lint": "2.3.0",
