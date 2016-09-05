@@ -46,18 +46,34 @@ html( lang='en' )
       .container
         section.row
           .gallery.clearfix
-            .gallery-image.col-md-4.col-xs-6
-              a( href='#' )
-                img( src=require('./images/gallery-1-130.jpg') alt='Kitchen tiling' )
-            .gallery-image.col-md-4.col-xs-6
-              a( href='#' )
-                img( src=require('./images/gallery-2-130.jpg') alt='Exterior tiling' )
-            .gallery-image.col-md-4.col-xs-6
-              a( href='#' )
-                img( src=require('./images/gallery-3-130.jpg') alt='Bathroom tiling and waterproofing' )
-            .gallery-image.col-md-8.col-xs-6
-              a( href='#' )
-                img( src=require('./images/gallery-4-130.jpg') alt='Wet area shower tiling and waterproofing' )
+            figure.gallery-item.col-md-4.col-xs-6
+              a( href=require('./images/gallery-1-xs.jpg') data-size='300x300' )
+                img(
+                  src=require('./images/gallery-1-xs.jpg')
+                  srcset=`${require('./images/gallery-1-xs.jpg')} 1x, ${require('./images/gallery-1-xs@2x.jpg')} 2x`
+                  alt='Kitchen tiling'
+                )
+            figure.gallery-item.col-md-4.col-xs-6
+              a( href=require('./images/gallery-2-xs.jpg') data-size='300x300' )
+                img(
+                  src=require('./images/gallery-2-xs.jpg')
+                  srcset=`${require('./images/gallery-2-xs.jpg')} 1x, ${require('./images/gallery-2-xs@2x.jpg')} 2x`
+                  alt='Exterior tiling'
+                )
+            figure.gallery-item.col-md-4.col-xs-6
+              a( href=require('./images/gallery-3-xs.jpg') data-size='300x300' )
+                img(
+                  src=require('./images/gallery-3-xs.jpg')
+                  srcset=`${require('./images/gallery-3-xs.jpg')} 1x, ${require('./images/gallery-3-xs@2x.jpg')} 2x`
+                  alt='Bathroom tiling and waterproofing'
+                )
+            figure.gallery-item.col-md-8.col-xs-6
+              a( href=require('./images/gallery-4-xs.jpg') data-size='300x300' )
+                img(
+                  src=require('./images/gallery-4-xs.jpg')
+                  srcset=`${require('./images/gallery-4-xs.jpg')} 1x, ${require('./images/gallery-4-xs@2x.jpg')} 2x`
+                  alt='Wet area shower tiling and waterproofing'
+                )
 
     footer
       .container
@@ -66,3 +82,6 @@ html( lang='en' )
 
     include includes/photoswipe.pug
 
+    <!--[if IE]>
+        script( src='https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js' )
+    <![endif]-->

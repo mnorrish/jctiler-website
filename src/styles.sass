@@ -147,13 +147,22 @@ main
       line-height: 22px
 
   .gallery
-    height: 500px
     background: #ccc
 
     img
       display: block
-      width: 100%
+      max-width: 100%
       background: #fff
+      margin-top: $spacing-xs
+
+    @media (max-width: $screen-sm-max)
+
+      .gallery-item:nth-child(odd)
+        padding-right: 9px
+
+      .gallery-item:nth-child(even)
+        padding-left: 9px
+
 
   @media (min-width: $screen-sm-min)
     margin-top: -$header-height-sm + 230px
