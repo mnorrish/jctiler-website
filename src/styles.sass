@@ -18,6 +18,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/'
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/utilities'
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities'
 
+=background-retina($file-1x, $file-2x, $size)
+  background:
+    image: url($file-1x)
+    size: #{$size}
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+    background:
+      image: url($file-2x)
+
 $brandBlue: #50c9ea
 
 $spacing-xs: $grid-gutter-width / 2
@@ -37,10 +46,10 @@ body
 header
   height: 460px
   background:
-    image: url(./images/header-xs-400.jpg)
     position: center top
     repeat: no-repeat
-    size: cover
+
+  +background-retina('./images/header-xs-400.jpg', './images/header-xs-400@2x.jpg', 'cover, auto')
 
   .container
     padding-top: $spacing-xs
