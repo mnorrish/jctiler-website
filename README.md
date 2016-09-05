@@ -1,6 +1,8 @@
 # JC Tiler website
 
-Single-page static website compiled with Webpack.
+Single-page static website compiled with [Webpack](https://webpack.github.io).
+
+JavaScript source is written in ES6/ES2015 and compiled to browser-ready JavaScript with [Babel](https://babeljs.io).
 
 Styles are written in [Sass](http://sass-lang.com) and utilize core components from [bootstrap-sass](https://github.com/twbs/bootstrap-sass) such as reset, grid, and type.
 
