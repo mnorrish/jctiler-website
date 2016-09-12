@@ -146,6 +146,18 @@ main
         size: 16px
       line-height: 22px
 
+      &.contact-facebook
+        & > *
+          display: block
+          float: left
+
+        img
+          margin:
+            top: 4px
+            right: 10px
+
+
+
   .gallery
     background: #ccc
 
@@ -249,12 +261,21 @@ main
         height: $contactHeight
         font-size: 18px
         line-height: 26px
-        padding: 120px 15px 0
+        padding: 115px 15px 0
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.7)
 
         &:hover
           background: $brandBlue
           text-shadow: none
+
+        &.contact-facebook
+
+          img
+            width: 70px
+            height: 70px
+            margin:
+              top: -10px
+              right: 15px
 
   @media (min-width: $screen-lg-min)
     $mainOverlap: $header-height-lg - 300px
