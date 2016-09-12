@@ -17,6 +17,7 @@ const config = {
 
   entry: {
     main: [
+      'picturefill',
       'babel-polyfill',
       './ga.js',
       './gallery.js',
