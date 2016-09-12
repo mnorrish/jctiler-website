@@ -28,7 +28,7 @@ html( lang='en' )
       .container
         section.row
           .blurb
-            .blurb-content.col-md-8.col-xs-12
+            .blurb-content.col-sm-8.col-xs-12
               p James Cordery &mdash; Dunedin based tiler specialising in kitchens, bathrooms, and waterproofing.
               p With over 30 years of floor and wall tiling experience, I deliver high quality workmanship and friendly, professional service.
               p Mapei approved waterproofer.
@@ -43,37 +43,38 @@ html( lang='en' )
             .col-md-4.col-xs-12
               a.contact-email( href='mailto:jamescordery14@gmail.com' ) Contact by email #[br]jamescordery14@gmail.com
 
-      .container
-        section.row
-          .gallery.clearfix
-            figure.gallery-item.col-md-4.col-xs-6
-              a( href=require('./images/gallery-1-xs.jpg') data-size='300x300' )
-                img(
-                  src=require('./images/gallery-1-xs.jpg')
-                  srcset=`${require('./images/gallery-1-xs.jpg')} 1x, ${require('./images/gallery-1-xs@2x.jpg')} 2x`
-                  alt='Kitchen tiling'
-                )
-            figure.gallery-item.col-md-4.col-xs-6
-              a( href=require('./images/gallery-2-xs.jpg') data-size='300x300' )
-                img(
-                  src=require('./images/gallery-2-xs.jpg')
-                  srcset=`${require('./images/gallery-2-xs.jpg')} 1x, ${require('./images/gallery-2-xs@2x.jpg')} 2x`
-                  alt='Exterior tiling'
-                )
-            figure.gallery-item.col-md-4.col-xs-6
-              a( href=require('./images/gallery-3-xs.jpg') data-size='300x300' )
-                img(
-                  src=require('./images/gallery-3-xs.jpg')
-                  srcset=`${require('./images/gallery-3-xs.jpg')} 1x, ${require('./images/gallery-3-xs@2x.jpg')} 2x`
-                  alt='Bathroom tiling and waterproofing'
-                )
-            figure.gallery-item.col-md-8.col-xs-6
-              a( href=require('./images/gallery-4-xs.jpg') data-size='300x300' )
-                img(
-                  src=require('./images/gallery-4-xs.jpg')
-                  srcset=`${require('./images/gallery-4-xs.jpg')} 1x, ${require('./images/gallery-4-xs@2x.jpg')} 2x`
-                  alt='Wet area shower tiling and waterproofing'
-                )
+      .gallery-wrapper
+        .container
+          section.row
+            .gallery.clearfix
+              figure.gallery-item.col-sm-4.col-xs-6
+                a( href=require('./images/gallery-1-xs.jpg') data-size='300x300' )
+                  img(
+                    src=require('./images/gallery-1-xs.jpg')
+                    srcset=`${require('./images/gallery-1-xs.jpg')} 1x, ${require('./images/gallery-1-xs@2x.jpg')} 2x`
+                    alt='Kitchen tiling'
+                  )
+              figure.gallery-item.col-sm-4.col-xs-6
+                a( href=require('./images/gallery-2-xs.jpg') data-size='300x300' )
+                  img(
+                    src=require('./images/gallery-2-xs.jpg')
+                    srcset=`${require('./images/gallery-2-xs.jpg')} 1x, ${require('./images/gallery-2-xs@2x.jpg')} 2x`
+                    alt='Exterior tiling'
+                  )
+              figure.gallery-item.col-sm-4.col-xs-6
+                a( href=require('./images/gallery-3-xs.jpg') data-size='300x300' )
+                  img(
+                    src=require('./images/gallery-3-xs.jpg')
+                    srcset=`${require('./images/gallery-3-xs.jpg')} 1x, ${require('./images/gallery-3-xs@2x.jpg')} 2x`
+                    alt='Bathroom tiling and waterproofing'
+                  )
+              figure.gallery-item.col-sm-8.col-xs-6
+                a( href=require('./images/gallery-4-xs.jpg') data-size='300x300' )
+                  img(
+                    src=require('./images/gallery-4-xs.jpg')
+                    srcset=`${require('./images/gallery-4-xs.jpg')} 1x, ${require('./images/gallery-4-xs@2x.jpg')} 2x`
+                    alt='Wet area shower tiling and waterproofing'
+                  )
 
     footer
       .container
