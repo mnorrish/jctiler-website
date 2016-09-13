@@ -227,11 +227,11 @@ main
     .gallery
       padding: 30px 15px
 
-      .gallery-item:nth-child(3)
-        height: 400px
+      .gallery-item
+        margin-bottom: 30px
 
-        & + *
-          margin-top: -$galleryItemHeight + 30px
+        &:nth-child(3)
+          margin-bottom: -400px
 
   @media (min-width: $screen-md-min)
     $mainOverlap: $header-height-md - 250px
