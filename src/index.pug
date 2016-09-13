@@ -50,7 +50,7 @@ html( lang='en' )
           section.row
             .gallery.clearfix
               figure.gallery-item.col-sm-4.col-xs-6
-                a( href=require('./images/gallery-1-xs.jpg') data-size='300x300' )
+                a( href=require('./images/gallery-1.jpg') data-size='800x600' )
                   picture
                     source(
                       media='(max-width: 767px)'
@@ -64,13 +64,17 @@ html( lang='en' )
                       media='(max-width: 1199px)'
                       srcset=`${require('./images/gallery-1-md.jpg')}, ${require('./images/gallery-1-md@2x.jpg')} 2x`
                     )
+                    source(
+                      media='(min-width: 1200px)'
+                      srcset=`${require('./images/gallery-1-lg.jpg')}, ${require('./images/gallery-1-lg@2x.jpg')} 2x`
+                    )
                     img(
                       src=require('./images/gallery-1-xs.jpg')
                       alt='Kitchen tiling'
                     )
 
               figure.gallery-item.col-sm-4.col-xs-6
-                a( href=require('./images/gallery-2-xs.jpg') data-size='300x300' )
+                a( href=require('./images/gallery-2.jpg') data-size='800x600' )
                   picture
                     source(
                       media='(max-width: 767px)'
@@ -84,13 +88,17 @@ html( lang='en' )
                       media='(max-width: 1199px)'
                       srcset=`${require('./images/gallery-2-md.jpg')}, ${require('./images/gallery-2-md@2x.jpg')} 2x`
                     )
+                    source(
+                      media='(min-width: 1200px)'
+                      srcset=`${require('./images/gallery-2-lg.jpg')}, ${require('./images/gallery-2-lg@2x.jpg')} 2x`
+                    )
                     img(
                       src=require('./images/gallery-2-xs.jpg')
                       alt='Exterior tiling'
                     )
 
               figure.gallery-item.col-sm-4.col-xs-6
-                a( href=require('./images/gallery-3-xs.jpg') data-size='300x300' )
+                a( href=require('./images/gallery-3.jpg') data-size='485x800' )
                   picture
                     source(
                       media='(max-width: 767px)'
@@ -104,13 +112,17 @@ html( lang='en' )
                       media='(max-width: 1199px)'
                       srcset=`${require('./images/gallery-3-md.jpg')}, ${require('./images/gallery-3-md@2x.jpg')} 2x`
                     )
+                    source(
+                      media='(min-width: 1200px)'
+                      srcset=`${require('./images/gallery-3-lg.jpg')}, ${require('./images/gallery-3-lg@2x.jpg')} 2x`
+                    )
                     img(
                       src=require('./images/gallery-3-xs.jpg')
                       alt='Bathroom tiling and waterproofing'
                     )
 
               figure.gallery-item.col-sm-8.col-xs-6
-                a( href=require('./images/gallery-4-xs.jpg') data-size='300x300' )
+                a( href=require('./images/gallery-4.jpg') data-size='800x452' )
                   picture
                     source(
                       media='(max-width: 767px)'
@@ -123,6 +135,10 @@ html( lang='en' )
                     source(
                       media='(max-width: 1199px)'
                       srcset=`${require('./images/gallery-4-md.jpg')}, ${require('./images/gallery-4-md@2x.jpg')} 2x`
+                    )
+                    source(
+                      media='(min-width: 1200px)'
+                      srcset=`${require('./images/gallery-4-lg.jpg')}, ${require('./images/gallery-4-lg@2x.jpg')} 2x`
                     )
                     img(
                       src=require('./images/gallery-4-xs.jpg')
