@@ -170,6 +170,12 @@ main
 
   @media (max-width: $screen-xs-max)
 
+    .blurb
+      padding-right: $spacing-xs
+
+    .blurb-content
+      max-width: 500px
+
     .gallery
 
       .gallery-item:nth-child(odd)
@@ -177,10 +183,6 @@ main
 
       .gallery-item:nth-child(even)
         padding-left: 9px
-
-    .blurb-content
-      max-width: 500px
-
 
   @media (min-width: $screen-sm-min)
     $mainOverlap: $header-height-sm - 250px
