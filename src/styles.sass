@@ -81,9 +81,12 @@ header
     .quote
       font-size: 12px
 
+  @media (min-width: 401px)
+    +background-retina('./images/header-xs-767.jpg', './images/header-xs-767@2x.jpg', 'cover, auto')
+
   @media (min-width: $screen-sm-min)
-    background-image: url(./images/header-sm.jpg)
     height: $header-height-sm
+    +background-retina('./images/header-sm.jpg', './images/header-sm@2x.jpg', 'cover, auto')
 
     .row
       padding: 15px
@@ -108,12 +111,13 @@ header
 
   @media (min-width: $screen-md-min)
     font-size: 20px
+    +background-retina('./images/header-md.jpg', './images/header-md@2x.jpg', 'cover, auto')
 
   @media (min-width: $screen-lg-min)
-    background-image: url(./images/header-lg.jpg)
     height: $header-height-lg
     max-width: $max-page-width
     margin: 0 auto
+    +background-retina('./images/header-lg.jpg', './images/header-lg@2x.jpg', 'cover, auto')
 
 main
   position: relative
@@ -301,6 +305,10 @@ main
       margin:
         top: $mainOverlap - $blurbHeight - $contactHeight - 45px
         bottom: 45px
+
+      a
+        padding:
+          left: 30px
 
     .gallery-wrapper
       background: #ccc
