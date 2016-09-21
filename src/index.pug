@@ -10,6 +10,8 @@ html( lang='en' )
     link( href='https://fonts.googleapis.com/css?family=Carter+One|Open+Sans' rel='stylesheet' )
     link( rel='shortcut icon' type='image/png' href=require('./images/favicon.png') )
 
+    include includes/structured-data.pug
+
     if htmlWebpackPlugin.options.isDevServer
       script( src='/webpack-dev-server.js' )
 
