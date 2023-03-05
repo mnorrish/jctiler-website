@@ -19,7 +19,6 @@ const config = {
     main: [
       'picturefill',
       'babel-polyfill',
-      './ga.js',
       './gallery.js',
       './styles.sass',
     ],

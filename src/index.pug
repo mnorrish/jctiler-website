@@ -12,6 +12,13 @@ html( lang='en' )
 
     include includes/structured-data.pug
 
+    script( src='https://www.googletagmanager.com/gtag/js?id=G-QY613CFNG3' async )
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QY613CFNG3');
+
     if htmlWebpackPlugin.options.isDevServer
       script( src='/webpack-dev-server.js' )
 
